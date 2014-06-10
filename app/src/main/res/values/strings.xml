@@ -4,4 +4,9 @@
     <string name="app_name">Торговый агент</string>
     <string name="activity_settings_name">Настройки</string>
 
+    <string name="settings_ftp_group_name">Настройки FTP сервера</string>
+    <string name="settings_ftp_caption_server">Сервер</string>
+    <string name="settings_ftp_caption_port">Порт</string>
+    <string name="settings_ftp_caption_login">Логин</string>
+    <string name="settings_ftp_caption_password">Пароль</string>
 </resources>

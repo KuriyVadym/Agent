@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.tradeagent.app.R;
+import com.example.tradeagent.app.data.database.DatabaseHelper;
 
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
@@ -18,9 +19,15 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        checkDatabase();
         mItemHolder = new ItemHolder();
         mItemHolder.mainButtonSettings.setOnClickListener(this);
+    }
+
+
+    private void checkDatabase(){
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        dbHelper.onCreate(null, null);
     }
 
 

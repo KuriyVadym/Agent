@@ -9,4 +9,8 @@
     <string name="settings_ftp_caption_port">Порт</string>
     <string name="settings_ftp_caption_login">Логин</string>
     <string name="settings_ftp_caption_password">Пароль</string>
+    <string name="settings_button_save">Сохранить</string>
+    <string name="settings_use_passive_mode">Использовать пасивный режим</string>
+
+    <string name="question_save_settings">Сохранить настройки?</string>
 </resources>

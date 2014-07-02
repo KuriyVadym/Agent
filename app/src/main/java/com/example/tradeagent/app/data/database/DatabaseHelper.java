@@ -46,7 +46,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase, ConnectionSource connectionSource) {
+    public void onCreate(SQLiteDatabase sqLiteDatabase, ConnectionSource arg1) {
         try {
             TableUtils.createTable(connectionSource, Client.class);
         } catch (SQLException e) {

@@ -16,7 +16,7 @@ public class Outlet {
     @DatabaseField(id = true, canBeNull = false)
     private long _ID;
 
-    @DatabaseField
+    @DatabaseField(foreign = true, foreignAutoRefresh= true)
     private Client Client; //клиент
 
     @DatabaseField

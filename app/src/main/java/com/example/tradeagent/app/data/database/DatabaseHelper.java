@@ -4,6 +4,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.tradeagent.app.data.database.entity.Client;
+import com.example.tradeagent.app.data.database.entity.MoneyHeader;
+import com.example.tradeagent.app.data.database.entity.OrderHeader;
+import com.example.tradeagent.app.data.database.entity.OrderTable;
 import com.example.tradeagent.app.data.database.entity.Outlet;
 import com.example.tradeagent.app.data.database.entity.Product;
 import com.example.tradeagent.app.data.database.entity.ProductGroup;
@@ -73,6 +76,27 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         } catch (SQLException e) {
             e.printStackTrace();
             Logger.e(TAG, "onCreate table=Product error: " + e.getMessage());
+        }
+
+        try {
+            TableUtils.createTable(connectionSource, OrderHeader.class);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            Logger.e(TAG, "onCreate table=OrderHeader error: " + e.getMessage());
+        }
+
+        try {
+            TableUtils.createTable(connectionSource, OrderTable.class);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            Logger.e(TAG, "onCreate table=OrderTable error: " + e.getMessage());
+        }
+
+        try {
+            TableUtils.createTable(connectionSource, MoneyHeader.class);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            Logger.e(TAG, "onCreate table=MoneyHeader error: " + e.getMessage());
         }
 
     }

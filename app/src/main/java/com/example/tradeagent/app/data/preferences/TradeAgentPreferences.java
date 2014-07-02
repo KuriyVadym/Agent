@@ -99,8 +99,8 @@ public class TradeAgentPreferences {
         saveString(TradeAgentApplication.getInstance(), FTP_PASSWORD, value);
     }
 
-    public static void setFtpPort(long value) {
-        saveLong(TradeAgentApplication.getInstance(), FTP_PORT, value);
+    public static void setFtpPort(int value) {
+        saveInt(TradeAgentApplication.getInstance(), FTP_PORT, value);
     }
 
     public static void setFtpUsePassiveMode(boolean value) {
@@ -119,8 +119,8 @@ public class TradeAgentPreferences {
         return getString(TradeAgentApplication.getInstance(), FTP_PASSWORD);
     }
 
-    public static long getFtpPort() {
-        return getLong(TradeAgentApplication.getInstance(), FTP_PORT);
+    public static int getFtpPort() {
+        return getInt(TradeAgentApplication.getInstance(), FTP_PORT);
     }
 
     public static boolean getFtpUsePassiveMode() {
